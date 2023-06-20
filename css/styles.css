@@ -1,215 +1,187 @@
 body {
-    background: #d1defa;
-    font-family: sans-serif;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
+  background: #d1defa;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
 }
 
-.layout{
-    width: 100%;
-    min-height: 800px;
-    display: grid;
-    grid-template-areas: 
-        "header header header header"
-        "nav nav nav nav"
-        "aside content content content"
-        "footer footer footer footer"
-    ;
-    grid-template-rows: 100px 70px auto 30px;
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "aside content content content";
+  grid-template-rows: 100px 70px auto;
+  min-height: 100vh;
 }
 
-
-.header{
-    grid-area: header;
-   background-color: white;
-   text-align: left;
-   font-style: italic;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.header {
+  grid-area: header;
+  background-color: white;
+  text-align: left;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo{
-    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
-    width: 40px;
-    height: 40px;
-    border-radius: 300px;
-   
+.logo {
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 300px;
 }
 
-.play{
-    width: 0;
-    height: 0;
-    margin-top: 15px;
-    margin-left: 16px;
-    border-left: 12px solid white;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;  
+.play {
+  width: 0;
+  height: 0;
+  margin-top: 15px;
+  margin-left: 16px;
+  border-left: 12px solid white;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
 }
 
-.header > h1{
-    margin-left: 10px;
+.header > h1 {
+  margin-left: 10px;
 }
 
 /*Estilos barra navegacion */
 
-.nav{
-    grid-area: nav;
-    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+.nav {
+  grid-area: nav;
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
 }
 
-.nav >ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+.nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
 
 .nav > ul > li {
-    padding: 10px;
+  padding: 10px;
 }
 
-.nav  a {
-    display: block;
-    font-size: 18px;
-    font-weight: lighter;
-    margin-left: 30px;
-    margin-right: 30px;
-    color: white;
-    text-decoration: none;
-    transition: all 500ms;
+.nav a {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  transition: all 500ms;
 }
 
-.nav a:hover{
-    transform: scale(1.1);
+.nav a:hover {
+  transform: scale(1.1);
 }
-
 
 /*Estilos contenido general*/
-.content{
-    
-    padding-right: 25px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    grid-area: content;
-    background: #f6f7f9;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+.content {
+  padding-right: 25px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  grid-area: content;
+  background: #f6f7f9;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.film-item{
-    flex-grow: 1;
-    min-width: 20%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 6px #ddd;
-    margin: 15px;
-    
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
+.film-item {
+  flex-grow: 1;
+  min-width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  margin: 15px;
 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
 button,
 input[type="submit"],
-input[type="button"]{
-    width: 100px;
-    background: #0b70e1;
-    color: white;
-    border: 0;
-    outline: 0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 15px;
-    font-weight: 500;
-    transition: all 400ms;
-   
+input[type="button"] {
+  width: 100px;
+  background: #0b70e1;
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: all 400ms;
 }
 
-.film-item .edit:hover{
-    background: #e77b00 !important;
+.film-item .edit:hover {
+  background: #e77b00 !important;
 }
 
-.film-item .delete:hover{
-    
-    background: #9b0202 !important;
+.film-item .delete:hover {
+  background: #9b0202 !important;
 }
 
 /*Barra lateral*/
-.aside{
-    
-    grid-area: aside;
-   padding-right: 70px;
+.aside {
+  grid-area: aside;
+  padding-right: 70px;
   padding-left: 30px;
-    background: #f6f7f9;
-    border-right: 1px solid #ddd;
-    padding-top: 15px;
+  background: #f6f7f9;
+  border-right: 1px solid #ddd;
+  padding-top: 15px;
 }
 
 .aside > div {
-    
-    box-sizing: border-box;
-    width: 100%;
-    margin: 20px;
-    padding: 20px;
-    
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 6px #ddd;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
 }
 
-.aside input[type = "text"],
+.aside input[type="text"],
 .aside textarea,
 .edit_form textarea,
-.edit_form input[type = "text"]
-{
-    display: block;
-    margin: 0px auto;
-    margin-top: 15px;
-    padding: 8px;
-    border-radius: 15px;
-    background:#f6f7f9;
-    color: #454545;
-    width: 80%;
-    
-    border-color: transparent;
+.edit_form input[type="text"] {
+  display: block;
+  margin: 0px auto;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 15px;
+  background: #f6f7f9;
+  color: #454545;
+  width: 80%;
+
+  border-color: transparent;
 }
 
-.edit_form{
-    border-top: 1px solid #ddd;
-    margin-top: 15px;
+.edit_form {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
 }
 
+@media (max-width: 1085px) {
+  .content {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-.footer{
-    grid-area: footer;
-    background: #d1defa;
-    color: #454545;
-    border-top: 1px solid white;
-    text-align: center;
-    line-height:35px;
- 
+  .film-item {
+    width: 85%;
+  }
 }
-
-.footer a{
-    color: #0b70e1
-}
-
-@media (max-width : 1085px){
-    .content{
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .film-item{
-        width: 85%;
-    }
-}   
